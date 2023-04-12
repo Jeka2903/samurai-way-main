@@ -1,7 +1,15 @@
 .nav {
     grid-area: n;
     background-color: lightgray;
+    padding: 20px;
 }
-.item {
+.item a {
     color: blue;
+    text-decoration: none;
+
 }
+
+.item a.active {
+    color: lime;
+}
+
