@@ -4,7 +4,9 @@ import {NavLink} from "react-router-dom";
 
 
 type DialogsType = {
-    dialogs:string
+    id:string
+    name:string
+    countMessage?:number
 }
 
 type MessageType = {
@@ -13,13 +15,13 @@ type MessageType = {
 
 
 
-const DialogItem = (props:DialogsType) => {
+const DialogItem =(props:DialogsType) => {
     let path = "/dialogs/" + props.id;
     return  <div className={s.dialog + ' ' + s.active}>
-        <NavLink to={path}>{props.name.}</NavLink>
+        <NavLink to={path}>{props.name}</NavLink>
 </div>
 }
-const Message = (props:DialogsType) =>{
+const Message = (props:MessageType) =>{
   return  <div className={s.dialog}>{props.message}</div>
 }
 

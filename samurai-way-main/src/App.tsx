@@ -5,7 +5,7 @@ import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import Dialogs from "./Components/Dialogs/Dialogs";
-import { BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 const App = () => {
     return (
@@ -14,9 +14,10 @@ const App = () => {
             <Header/>
             <Navbar/>
             <div className='app-wrapper-content'>
+                <Switch>
                 <Route path='/dialogs'component={Dialogs}/>
                 <Route path='/profile'component={Profile}/>
-                <Dialogs />
+                </Switch>
                 <Profile />
             </div>
         </div>

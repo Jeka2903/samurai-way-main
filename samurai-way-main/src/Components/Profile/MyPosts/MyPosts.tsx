@@ -3,7 +3,7 @@ import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 
-const MyPosts = (props) => {
+const MyPosts = (props:any) => {
     return (
         <div className={s.postsBlock}>
             <h2>My posts</h2>
