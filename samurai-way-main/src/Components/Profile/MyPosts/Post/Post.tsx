@@ -12,7 +12,6 @@ const Post = (props:any) => {
         <div>
             <span>like</span> { props.likeCounter }
         </div>
-
         </div>
     )
 }
