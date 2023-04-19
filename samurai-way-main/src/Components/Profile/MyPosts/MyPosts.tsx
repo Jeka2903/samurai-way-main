@@ -2,41 +2,33 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 
+type MyPostsType = {
+    message:string
 
-const MyPosts = (props:any) => {
+}
 
+const MyPosts = (props: MyPostsType) => {
 
-    let postData = [
-        { id: 1, message: 'Hi , how are you?' likeCounter:35},
-        { id: 2, message: 'How is life?' likeCounter:43},
-        { id: 3, message: 'Hello evryone!!!' likeCounter:85},
-       ]
+    let postsElements =
+        props.posts.map((p, i) => <Post message={p.message} key={i} likeCount={p.likesCount}/>);///когда делаешь  map requier key
+
 
     return (
         <div className={s.postsBlock}>
-            <h2>My posts</h2>
+            <h3>My posts</h3>
+            <div>
                 <div>
-                    <div>
-                        <textarea></textarea>
-                    </div>
-                    <div>
-                        <button>Add post</button>
-                    </div>
-                    <div>
-                        <button>Remove</button>
-                    </div>
-
+                    <textarea></textarea>
                 </div>
-
-
-                <div className={s.posts}>
-                    <Post message ={postData[0].message} likesCount={postData[0].likeCounter}/>
-                    <Post message ={postData[0].message} likesCount={postData[1].likeCounter}/>
-                    <Post message ={postData[0].message} likesCount={postData[2].likeCounter}/>
-                    <Post message='Hello evryone!!!' likeCounter='85'/>
+                <div>
+                    <button>Add post</button>
                 </div>
-        </div>
-)
+            </div>
+            <div className={s.posts}>
+                {postsElements}
+            </div>
+        </div>)
 }
+
 
 export default MyPosts;
