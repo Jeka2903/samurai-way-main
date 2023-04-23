@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 // import Message from './Message/Message';
 
 type DialogsType = {
-    id: string
+    id: number
     name: string
     countMessage?: number
 }
@@ -24,7 +24,7 @@ const Message = (props: MessageType) => {
 }
 
 
-const dialogs = (props: DialogsType) => {
+const Dialogs = (props: DialogsType) => {
 
     let dialogs = [
         {id: 1, name: "Anton"},
@@ -61,4 +61,4 @@ const dialogs = (props: DialogsType) => {
 }
 
 
-export default dialogs;
+export default Dialogs;
