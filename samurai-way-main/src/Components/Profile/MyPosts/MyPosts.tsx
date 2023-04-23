@@ -10,7 +10,7 @@ type MyPostsType = {
 const MyPosts = (props: MyPostsType) => {
 
     let postsElements =
-        props.posts.map((p, i) => <Post message={p.message} key={i} likeCount={p.likesCount}/>);///когда делаешь  map requier key
+        props.posts.map((p, i) => <Post message={p.message} key={i} likeCount={p.likesCount}/>);
 
 
     return (
