@@ -11,7 +11,7 @@ type PostType = {
 const MyPosts = () => {
 
     let posts: PostType[] = [
-        {id:1,message:"Hello , How are you?",likesCount: 65},
+        {id:1,message:"Hello , How are you?",likesCount: 65}
             // [{id:2,message:"Hello",likesCount: 35}
     ]
     let postsElements =
