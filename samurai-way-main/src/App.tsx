@@ -23,8 +23,8 @@ const App = (props:AppType) => {
                 {/*<Route path='/dialogs'component={Dialogs}/>*/}
                 {/*<Route path='/profile'component={Profile}/>*/}
 
-                    <Route path="/" element={<Profile posts={props.posts} />} />
-                    <Route path="/Dialogs/*" element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
+                    <Route path="/" render={() => <Profile posts={props.posts} />} />
+                    <Route path="/Dialogs/*" render={()=> <Dialogs dialogs={props.dialogs} messages={props.messages} />} />
                 </Switch>
                 <Profile />
             </div>
