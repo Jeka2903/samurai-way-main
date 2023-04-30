@@ -8,14 +8,9 @@ type PostType = {
     likesCount:number
 }
 
-const MyPosts = () => {
-
-    let posts: PostType[] = [
-        {id:1,message:"Hello , How are you?",likesCount: 65}
-            // [{id:2,message:"Hello",likesCount: 35}
-    ]
+const MyPosts = (props:PostType) => {
     let postsElements =
-        posts.map((p, i) => <Post message={p.message} key={i} likeCount={p.likesCount}/>);
+        props.posts.map((p, i) => <Post message={p.message} key={i} likeCount={p.likesCount}/>);
 
 
     return (

@@ -10,6 +10,9 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 type PropsType = {}
 
 const App = (props:PropsType) => {
+
+
+
     return (
         <BrowserRouter>
         <div className='app-wrapper'>
@@ -20,8 +23,8 @@ const App = (props:PropsType) => {
                 {/*<Route path='/dialogs'component={Dialogs}/>*/}
                 {/*<Route path='/profile'component={Profile}/>*/}
 
-                    <Route path="/" render={() => <Profile />} />
-                    <Route path="/Dialogs/*" render={() => <Dialogs />} />
+                    <Route path="/" render={() => <Profile posts={props.posts}/>} />
+                    <Route path="/Dialogs/*" render={() => <Dialogs posts={props.dialogs} messages={props.messages}/>} />
                 </Switch>
                 <Profile />
             </div>
