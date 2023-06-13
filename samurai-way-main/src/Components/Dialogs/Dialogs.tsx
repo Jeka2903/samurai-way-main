@@ -28,11 +28,11 @@ const DialogItem = (props: DialogsPropsType) => {
     </div>
 }
 
-const Dialogs = (props:any) => {
+const Dialogs = (props: any) => {
 
 
-    let dialogsElements = props.dialogs.map(d => <DialogItem dialog={d}/>);
-    let messagesElements = props.messages.map(m => <Message message={m.message}/>);
+    let dialogsElements = props.dialogs.map((d:DialogsType) => <DialogItem dialog={d}/>);
+    let messagesElements = props.messages.map((m:MessageType) => <Message message={m.message}/>);
 
     return (
         <div className={s.dialogs}>

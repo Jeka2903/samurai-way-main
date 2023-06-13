@@ -4,9 +4,12 @@ import Post from "./Post/Post";
 
 type PostType = {
     id:number
-    message:string
-    likesCount:number
+    posts: Array<{
+         message: string;
+         likesCount: number;
+     }>
 }
+
 
 const MyPosts = (props:PostType) => {
     let postsElements =
