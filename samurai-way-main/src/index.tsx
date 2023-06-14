@@ -3,18 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-type PostType = {
+export type PostType = {
     id:number
     message:string
     likesCount:number
-
 }
+
+export type DialogType  ={
+    id:number
+    name:string
+}
+export type MessageType = {
+    id:number
+    message:string
+}
+
+
 
 let posts: PostType[] = [
     {id:1,message:"Hello , How are you?",likesCount: 65}
     // [{id:2,message:"Hello",likesCount: 35}
 ]
-let dialogs = [
+let dialogs:DialogType[] = [
     {id: 1, name: "Anton"},
     {id: 2, name: "Roman"},
     {id: 3, name: "Irina"},
@@ -23,7 +33,7 @@ let dialogs = [
     {id: 6, name: "Alex"}
 ]
 
-let messages = [
+let messages:MessageType[] = [
     {id: 1, message: "Hello , How are you?"},
     {id: 2, message: "How are you friends?"},
     {id: 3, message: "What's news?"},

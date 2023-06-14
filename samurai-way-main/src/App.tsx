@@ -6,11 +6,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import Dialogs from "./Components/Dialogs/Dialogs";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {DialogType, PostType,MessageType} from "./index";
 
 type PropsType = {
-    posts:string
-    messages:string
-    dialogs:string
+    posts:PostType[]
+    messages:MessageType[]
+    dialogs:DialogType[]
 }
 
 const App = (props:PropsType) => {
