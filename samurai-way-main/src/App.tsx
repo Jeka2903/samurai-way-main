@@ -29,7 +29,6 @@ const App = (props:PropsType) => {
                     <Route path="/" render={() => <Profile posts={props.posts}/>} />
                     <Route path="/Dialogs/*" render={() => <Dialogs posts={props.dialogs} messages={props.messages}/>} />
                 </Switch>
-                <Profile />
             </div>
         </div>
         </BrowserRouter>
